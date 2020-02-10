@@ -20,6 +20,16 @@ public class UAV {
 		this.weight = weight;
 		this.price = price;
 	}
+	
+	/**
+	* UAV copy constructor
+	*
+	* @param u a UAV object
+	*/
+	public UAV(UAV u){
+		this.weight = u.weight;
+		this.price = u.price;
+	}
 
 	/**
 	* Returns value of weight
