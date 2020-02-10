@@ -24,6 +24,17 @@ public class AgriculturalDrone extends UAV {
 		this.brand = brand;
 		this.carryCapacity = carryCapacity;
 	}
+	
+	/**
+	* AgriculturalDrone copy constructor
+	*
+	* @param A an AgriculturalDrone object
+	*/
+	public AgriculturalDrone(AgriculturalDrone A){
+		super(UAV);
+		this.brand = A.brand;
+		this.carryCapacity = A.carryCapacity;
+	}
 
 	/**
 	* Returns value of brand
