@@ -18,6 +18,16 @@ public class Quadcopter extends Helicopter {
 		super(brand, price, horsePower, numCylinders, creationYear, passengerCapacity);
 		this.maxFlyingSpeed = maxFlyingSpeed;
 	}
+	
+	/**
+	* Copy constructor
+	*
+	* @param Q a Quadcopter object
+	*/
+	public Quadcopter(Quadcopter Q){
+		super(Helicopter);
+		this.maxFlyingSpeed = Q.maxFlyingSpeed;
+	}
 
 	/**
 	* Returns value of maxFlyingSpeed
