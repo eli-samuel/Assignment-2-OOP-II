@@ -27,7 +27,19 @@ public class Helicopter extends Airplane {
 		this.creationYear = creationYear;
 		this.passengerCapacity = passengerCapacity;
 	}
-
+	
+	
+	/**
+	* Copy contructor
+	*
+	* @param H a Helicopter object
+	*/
+	public Helicopter(Helicopter H){
+		super(Airplane);
+		this.numCylinders = H.numCylinders;
+		this.creationYear = H.creationYear;
+		this.passengerCapacity = H.passengerCapacity;
+	}
 	/**
 	* Returns value of numCylinders
 	* @return
