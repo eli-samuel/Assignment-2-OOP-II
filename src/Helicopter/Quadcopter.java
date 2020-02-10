@@ -1,3 +1,5 @@
+package Helicopter;
+
 public class Quadcopter extends Helicopter {
 
     private int maxFlyingSpeed;
@@ -12,8 +14,8 @@ public class Quadcopter extends Helicopter {
 	/**
 	* Default Quadcopter constructor
 	*/
-	public Quadcopter(int maxFlyingSpeed) {
-		super();
+	public Quadcopter(String brand, double price, int horsePower, int numCylinders, int creationYear, int passengerCapacity, int maxFlyingSpeed) {
+		super(brand, price, horsePower, numCylinders, creationYear, passengerCapacity);
 		this.maxFlyingSpeed = maxFlyingSpeed;
 	}
 
@@ -31,6 +33,16 @@ public class Quadcopter extends Helicopter {
 	*/
 	public void setMaxFlyingSpeed(int maxFlyingSpeed) {
 		this.maxFlyingSpeed = maxFlyingSpeed;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null) return false;
+		else if (getClass() != obj.getClass()) return false;
+		else {
+			Quadcopter other = (Quadcopter) obj;
+			return (maxFlyingSpeed == other.maxFlyingSpeed);
+		}
 	}
 
 	/**

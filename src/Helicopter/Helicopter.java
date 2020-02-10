@@ -1,3 +1,7 @@
+package Helicopter;
+
+import Airplane.Airplane;
+
 public class Helicopter extends Airplane {
 
     private int numCylinders;
@@ -9,13 +13,16 @@ public class Helicopter extends Airplane {
 	*/
 	public Helicopter() {
 		super();
+		numCylinders = 1;
+		creationYear = 1900;
+		passengerCapacity = 1;
 	}
 
 	/**
 	* Default Helicopter constructor
 	*/
-	public Helicopter(int numCylinders, int creationYear, int passengerCapacity) {
-		super();
+	public Helicopter(String brand, double price, int horsePower, int numCylinders, int creationYear, int passengerCapacity) {
+		super(brand, price, horsePower);
 		this.numCylinders = numCylinders;
 		this.creationYear = creationYear;
 		this.passengerCapacity = passengerCapacity;
@@ -67,6 +74,17 @@ public class Helicopter extends Airplane {
 	*/
 	public void setPassengerCapacity(int passengerCapacity) {
 		this.passengerCapacity = passengerCapacity;
+	}
+	
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null) return false;
+		else if (getClass() != obj.getClass()) return false;
+		else {
+			Helicopter other = (Helicopter) obj;
+			return (numCylinders == other.numCylinders && creationYear == other.creationYear && passengerCapacity == other.passengerCapacity);
+		}
 	}
 
 	/**

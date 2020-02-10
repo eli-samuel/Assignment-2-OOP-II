@@ -1,3 +1,7 @@
+package Multirotor;
+
+import Helicopter.Helicopter;
+
 public class Multirotor extends Helicopter {
 
     private int numRotors;
@@ -7,13 +11,14 @@ public class Multirotor extends Helicopter {
 	*/
 	public Multirotor() {
 		super();
+		numRotors = 1;
 	}
 
 	/**
 	* Default Multirotor constructor
 	*/
-	public Multirotor(int numRotors) {
-		super();
+	public Multirotor(String brand, double price, int horsePower, int numCylinders, int creationYear, int passengerCapacity, int numRotors) {
+		super(brand, price, horsePower, numCylinders, creationYear, passengerCapacity);
 		this.numRotors = numRotors;
 	}
 
@@ -31,6 +36,16 @@ public class Multirotor extends Helicopter {
 	*/
 	public void setNumRotors(int numRotors) {
 		this.numRotors = numRotors;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null) return false;
+		else if (getClass() != obj.getClass()) return false;
+		else {
+			Multirotor other = (Multirotor) obj;
+			return (numRotors == other.numRotors);
+		}
 	}
 
 	/**

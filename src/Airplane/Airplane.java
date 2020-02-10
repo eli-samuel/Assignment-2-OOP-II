@@ -1,3 +1,5 @@
+package Airplane;
+
 public class Airplane {
 
     private String brand;
@@ -8,14 +10,15 @@ public class Airplane {
 	* Default empty Airplane constructor
 	*/
 	public Airplane() {
-		super();
+		brand = "";
+		price = 1;
+		horsePower = 1;
 	}
 
 	/**
 	* Default Airplane constructor
 	*/
 	public Airplane(String brand, double price, int horsePower) {
-		super();
 		this.brand = brand;
 		this.price = price;
 		this.horsePower = horsePower;
@@ -67,6 +70,19 @@ public class Airplane {
 	*/
 	public void setHorsePower(int horsePower) {
 		this.horsePower = horsePower;
+	}
+
+	/**
+	 * 
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null) return false;
+		else if (getClass() != obj.getClass()) return false;
+		else {
+			Airplane other = (Airplane) obj;
+			return (brand == other.brand && price == other.price && horsePower == other.horsePower);
+		}
 	}
 
 	/**

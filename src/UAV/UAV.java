@@ -1,3 +1,5 @@
+package UAV;
+
 public class UAV {
 
     private double weight;
@@ -7,14 +9,14 @@ public class UAV {
 	* Default empty UAV constructor
 	*/
 	public UAV() {
-		super();
+		weight = 1;
+		price  = 1;
 	}
 
 	/**
 	* Default UAV constructor
 	*/
 	public UAV(double weight, double price) {
-		super();
 		this.weight = weight;
 		this.price = price;
 	}
@@ -49,6 +51,16 @@ public class UAV {
 	*/
 	public void setPrice(double price) {
 		this.price = price;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null) return false;
+		else if (getClass() != obj.getClass()) return false;
+		else {
+			UAV other = (UAV) obj;
+			return (weight == other.weight && price == other.price);
+		}
 	}
 
 	/**

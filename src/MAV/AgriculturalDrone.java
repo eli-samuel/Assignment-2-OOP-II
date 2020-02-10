@@ -1,3 +1,7 @@
+package MAV;
+
+import UAV.UAV;
+
 public class AgriculturalDrone extends UAV {
 
     private String brand;
@@ -8,13 +12,15 @@ public class AgriculturalDrone extends UAV {
 	*/
 	public AgriculturalDrone() {
 		super();
+		brand = "";
+		carryCapacity = 1;
 	}
 
 	/**
 	* Default AgriculturalDrone constructor
 	*/
-	public AgriculturalDrone(String brand, int carryCapacity) {
-		super();
+	public AgriculturalDrone(double weight, double price, String brand, int carryCapacity) {
+		super(weight, price);
 		this.brand = brand;
 		this.carryCapacity = carryCapacity;
 	}
@@ -49,6 +55,16 @@ public class AgriculturalDrone extends UAV {
 	*/
 	public void setCarryCapacity(int carryCapacity) {
 		this.carryCapacity = carryCapacity;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null) return false;
+		else if (getClass() != obj.getClass()) return false;
+		else {
+			AgriculturalDrone other = (AgriculturalDrone) obj;
+			return (brand.equals(other.brand) && carryCapacity == other.carryCapacity);
+		}
 	}
 
 	/**

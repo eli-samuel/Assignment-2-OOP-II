@@ -1,3 +1,7 @@
+package MAV;
+
+import UAV.UAV;
+
 public class MAV extends UAV {
 
     private String model;
@@ -8,13 +12,15 @@ public class MAV extends UAV {
 	*/
 	public MAV() {
 		super();
+		model = "";
+		size = 1;
 	}
 
 	/**
 	* Default MAV constructor
 	*/
-	public MAV(String model, double size) {
-		super();
+	public MAV(double weight, double price, String model, double size) {
+		super(weight, price);
 		this.model = model;
 		this.size = size;
 	}
@@ -49,6 +55,16 @@ public class MAV extends UAV {
 	*/
 	public void setSize(double size) {
 		this.size = size;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null) return false;
+		else if (getClass() != obj.getClass()) return false;
+		else {
+			MAV other = (MAV) obj;
+			return (model.equals(other.model) && size == other.size);
+		}
 	}
 
 	/**
