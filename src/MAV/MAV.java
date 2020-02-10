@@ -24,6 +24,17 @@ public class MAV extends UAV {
 		this.model = model;
 		this.size = size;
 	}
+	
+	/**
+	* MAV copy constructor
+	*
+	* @param Ma an MAV object
+	*/
+	public MAV(MAV Ma){
+		super(UAV);
+		this.model = Ma.model;
+		this.size = Ma.size;
+	}
 
 	/**
 	* Returns value of model
