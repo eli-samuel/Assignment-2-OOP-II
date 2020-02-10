@@ -21,6 +21,16 @@ public class Multirotor extends Helicopter {
 		super(brand, price, horsePower, numCylinders, creationYear, passengerCapacity);
 		this.numRotors = numRotors;
 	}
+	
+	/**
+	* Multirotor copy constructor
+	*
+	* @param M an Multirotor object
+	*/
+	public Multirotor(Multirotor M){
+		super(Helicopter);
+		this.numRotors = M.numRotors;
+	}
 
 	/**
 	* Returns value of numRotors
