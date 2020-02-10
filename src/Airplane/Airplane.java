@@ -17,13 +17,26 @@ public class Airplane {
 
 	/**
 	* Default Airplane constructor
+	*
+	* @param brand a string variable
+	* @param price a double variable
+	* @param horsePower a integer variable
 	*/
 	public Airplane(String brand, double price, int horsePower) {
 		this.brand = brand;
 		this.price = price;
 		this.horsePower = horsePower;
 	}
-
+	/**
+	* Copy constructor
+	* 
+	* @param p an Airplane object
+	*/
+	public Airplane(Airplane p){
+		this.brand = p.brand;
+		this.price = p.price;
+		this.horsePower = horsePower;	
+	}
 	/**
 	* Returns value of brand
 	* @return
