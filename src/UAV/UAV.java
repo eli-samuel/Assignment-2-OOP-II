@@ -79,6 +79,6 @@ public class UAV {
 	*/
 	@Override
 	public String toString() {
-		return "UAV [weight=" + weight + ", price=" + price + "]";
+		return "This UAV weighs" + weight +"Kg" + "and costs $" + price;
 	}
 }
