@@ -9,6 +9,7 @@ public class Quadcopter extends Helicopter {
 	*/
 	public Quadcopter() {
 		super();
+        maxFlyingSpeed = 1;
 	}
 
 	/**
@@ -18,7 +19,7 @@ public class Quadcopter extends Helicopter {
 		super(brand, price, horsePower, numCylinders, creationYear, passengerCapacity);
 		this.maxFlyingSpeed = maxFlyingSpeed;
 	}
-	
+
 	/**
 	* Copy constructor
 	*
@@ -44,7 +45,7 @@ public class Quadcopter extends Helicopter {
 	public void setMaxFlyingSpeed(int maxFlyingSpeed) {
 		this.maxFlyingSpeed = maxFlyingSpeed;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (obj == null) return false;
@@ -61,6 +62,6 @@ public class Quadcopter extends Helicopter {
 	*/
 	@Override
 	public String toString() {
-		return "Quadcopter [maxFlyingSpeed=" + maxFlyingSpeed + ", numCylinders=" + numCylinders + ", creationYear=" + creationYear + ", passengerCapacity=" + passengerCapacity + ", brand=" + brand + ", price=" + price + ", horsePower=" + horsePower + "]";
+		return "This quadcopter has a maximum flying speed of " + maxFlyingSpeed + "km/h, it has " + numCylinders + " cylinders, and was created in " + creationYear + ". It holds " + passengerCapacity + " passengers, it is manufactured by " + brand + ", the selling price is " + price + ", and it has " + horsePower + " horsepower.";
 	}
 }

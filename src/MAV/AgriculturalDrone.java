@@ -84,6 +84,6 @@ public class AgriculturalDrone extends UAV {
 	*/
 	@Override
 	public String toString() {
-		return "This AgriculturalDrone weighs " + get.weight()+"kg, the price of this drone is $" + get.price() + "the manufacturer of this agricultural drone is " + brand + "the its total carrying capicitiy is " carryCapacity+ "kg"
+		return "This agricultural drone is manufactured by " + brand + " and can carry up to" + carryCapacity + " kg. It weighs" + weight +" kg" + " and costs $" + price;
 	}
 }

@@ -24,7 +24,7 @@ public class MAV extends UAV {
 		this.model = model;
 		this.size = size;
 	}
-	
+
 	/**
 	* MAV copy constructor
 	*
@@ -67,7 +67,7 @@ public class MAV extends UAV {
 	public void setSize(double size) {
 		this.size = size;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (obj == null) return false;
@@ -84,6 +84,6 @@ public class MAV extends UAV {
 	*/
 	@Override
 	public String toString() {
-		return "MAV [model=" + model + ", size=" + size + ", weight=" + weight + ", price=" + price + "]";
+		return "This MAV is the " + model + " model, it has a diameter of " + size + " cm. It weighs" + weight +" kg" + " and costs $" + price;
 	}
 }

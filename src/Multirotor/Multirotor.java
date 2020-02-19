@@ -21,7 +21,7 @@ public class Multirotor extends Helicopter {
 		super(brand, price, horsePower, numCylinders, creationYear, passengerCapacity);
 		this.numRotors = numRotors;
 	}
-	
+
 	/**
 	* Multirotor copy constructor
 	*
@@ -47,7 +47,7 @@ public class Multirotor extends Helicopter {
 	public void setNumRotors(int numRotors) {
 		this.numRotors = numRotors;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (obj == null) return false;
@@ -64,6 +64,6 @@ public class Multirotor extends Helicopter {
 	*/
 	@Override
 	public String toString() {
-		return "Multirotor [numRotors=" + numRotors + ", numCylinders=" + numCylinders + ", creationYear=" + creationYear + ", passengerCapacity=" + passengerCapacity + "brand=" + brand + ", price=" + price + ", horsePower=" + horsePower + "]";
+		return "This multirotor has " + numRotors + "rotors, " + numCylinders + " cylinders, and was created in " + creationYear + ". It holds " + passengerCapacity + " passengers, it is manufactured by " + brand + ", the selling price is " + price + ", and it has " + horsePower + " horsepower.";
 	}
 }

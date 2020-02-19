@@ -14,7 +14,7 @@ public class Assignment2 {
 	public static FlyingObject[] copyFlyingObjects(FlyingObject[] a) {
 		@SuppressWarnings("unused")
 		FlyingObject[] b = new FlyingObject[a.length];
-		for (int i = 0; i < a.length; i++) {
+		for (int i = 0; i < a.length; i++) { // because data lost etc, thats why we need to use clone() method
 		//b[i] = new Sale(a[i]); // Problem here!
 			//b[i] = (Airplane) a[i].clone(); // Solution!
 		}

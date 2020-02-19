@@ -106,6 +106,6 @@ public class Airplane extends FlyingObject {
 	*/
 	@Override
 	public String toString() {
-		return "Airplane [brand=" + brand + ", price=" + price + ", horsePower=" + horsePower + "]";
+		return "This airplane is manufactured by " + brand + ", the selling price is " + price + ", and it has " + horsePower + " horsepower.";
 	}
 }

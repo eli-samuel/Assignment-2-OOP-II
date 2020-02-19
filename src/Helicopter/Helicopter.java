@@ -27,8 +27,8 @@ public class Helicopter extends Airplane {
 		this.creationYear = creationYear;
 		this.passengerCapacity = passengerCapacity;
 	}
-	
-	
+
+
 	/**
 	* Copy contructor
 	*
@@ -87,7 +87,7 @@ public class Helicopter extends Airplane {
 	public void setPassengerCapacity(int passengerCapacity) {
 		this.passengerCapacity = passengerCapacity;
 	}
-	
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -105,6 +105,6 @@ public class Helicopter extends Airplane {
 	*/
 	@Override
 	public String toString() {
-		return "Helicopter [numCylinders=" + numCylinders + ", creationYear=" + creationYear + ", passengerCapacity=" + passengerCapacity + ", brand=" + brand + ", price=" + price + ", horsePower=" + horsePower + "]";
+		return "This helicopter has " + numCylinders + " cylinders, and was created in " + creationYear + ". It holds " + passengerCapacity + " passengers, it is manufactured by " + brand + ", the selling price is " + price + ", and it has " + horsePower + " horsepower.";
 	}
 }
