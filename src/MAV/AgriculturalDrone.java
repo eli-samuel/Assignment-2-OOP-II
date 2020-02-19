@@ -24,7 +24,7 @@ public class AgriculturalDrone extends UAV {
 		this.brand = brand;
 		this.carryCapacity = carryCapacity;
 	}
-	
+
 	/**
 	* AgriculturalDrone copy constructor
 	*
@@ -67,7 +67,7 @@ public class AgriculturalDrone extends UAV {
 	public void setCarryCapacity(int carryCapacity) {
 		this.carryCapacity = carryCapacity;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (obj == null) return false;
@@ -84,6 +84,6 @@ public class AgriculturalDrone extends UAV {
 	*/
 	@Override
 	public String toString() {
-		return "AgriculturalDrone [brand=" + brand + ", carryCapacity=" + carryCapacity + ", weight=" + weight + ", price=" + price +"]";
+		return "This AgriculturalDrone weighs " + get.weight()+"kg, the price of this drone is $" + get.price() + "the manufacturer of this agricultural drone is " + brand + "the its total carrying capicitiy is " carryCapacity+ "kg"
 	}
 }

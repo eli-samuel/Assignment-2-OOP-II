@@ -81,6 +81,6 @@ public class UAV extends FlyingObject {
 	*/
 	@Override
 	public String toString() {
-		return "UAV [weight=" + weight + ", price=" + price + "]";
+		return "This UAV weighs" + weight +"Kg" + "and costs $" + price;
 	}
 }
