@@ -1,10 +1,12 @@
 package Airplane;
 
-public class Airplane {
+import FlyingObject.FlyingObject;
 
-    private String brand;
-    private double price;
-    private int horsePower;
+public class Airplane extends FlyingObject {
+
+    protected String brand;
+    protected double price;
+    protected int horsePower;
 
 	/**
 	* Default empty Airplane constructor
@@ -29,13 +31,13 @@ public class Airplane {
 	}
 	/**
 	* Copy constructor
-	* 
+	*
 	* @param p an Airplane object
 	*/
 	public Airplane(Airplane p){
 		this.brand = p.brand;
 		this.price = p.price;
-		this.horsePower = horsePower;	
+		this.horsePower = p.horsePower;
 	}
 	/**
 	* Returns value of brand
@@ -86,7 +88,7 @@ public class Airplane {
 	}
 
 	/**
-	 * 
+	 *
 	 */
 	@Override
 	public boolean equals(Object obj) {

@@ -4,9 +4,9 @@ import Airplane.Airplane;
 
 public class Helicopter extends Airplane {
 
-    private int numCylinders;
-    private int creationYear;
-    private int passengerCapacity;
+    protected int numCylinders;
+    protected int creationYear;
+    protected int passengerCapacity;
 
 	/**
 	* Default empty Helicopter constructor
@@ -35,7 +35,7 @@ public class Helicopter extends Airplane {
 	* @param H a Helicopter object
 	*/
 	public Helicopter(Helicopter H){
-		super(Airplane);
+		super((Airplane) H); // DOES THIS WORK?
 		this.numCylinders = H.numCylinders;
 		this.creationYear = H.creationYear;
 		this.passengerCapacity = H.passengerCapacity;
@@ -105,6 +105,6 @@ public class Helicopter extends Airplane {
 	*/
 	@Override
 	public String toString() {
-		return "Helicopter [numCylinders=" + numCylinders + ", creationYear=" + creationYear + ", passengerCapacity=" + passengerCapacity + "]";
+		return "Helicopter [numCylinders=" + numCylinders + ", creationYear=" + creationYear + ", passengerCapacity=" + passengerCapacity + ", brand=" + brand + ", price=" + price + ", horsePower=" + horsePower + "]";
 	}
 }

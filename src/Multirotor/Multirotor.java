@@ -28,7 +28,7 @@ public class Multirotor extends Helicopter {
 	* @param M an Multirotor object
 	*/
 	public Multirotor(Multirotor M){
-		super(Helicopter);
+		super((Helicopter) M);
 		this.numRotors = M.numRotors;
 	}
 
@@ -64,6 +64,6 @@ public class Multirotor extends Helicopter {
 	*/
 	@Override
 	public String toString() {
-		return "Multirotor [numRotors=" + numRotors + "]";
+		return "Multirotor [numRotors=" + numRotors + ", numCylinders=" + numCylinders + ", creationYear=" + creationYear + ", passengerCapacity=" + passengerCapacity + "brand=" + brand + ", price=" + price + ", horsePower=" + horsePower + "]";
 	}
 }

@@ -31,7 +31,7 @@ public class MAV extends UAV {
 	* @param Ma an MAV object
 	*/
 	public MAV(MAV Ma){
-		super(UAV);
+		super((UAV) Ma);
 		this.model = Ma.model;
 		this.size = Ma.size;
 	}
@@ -84,6 +84,6 @@ public class MAV extends UAV {
 	*/
 	@Override
 	public String toString() {
-		return "MAV [model=" + model + ", size=" + size + "]";
+		return "MAV [model=" + model + ", size=" + size + ", weight=" + weight + ", price=" + price + "]";
 	}
 }

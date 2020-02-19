@@ -1,9 +1,11 @@
 package UAV;
 
-public class UAV {
+import FlyingObject.FlyingObject;
 
-    private double weight;
-    private double price;
+public class UAV extends FlyingObject {
+
+    protected double weight;
+    protected double price;
 
 	/**
 	* Default empty UAV constructor
@@ -20,7 +22,7 @@ public class UAV {
 		this.weight = weight;
 		this.price = price;
 	}
-	
+
 	/**
 	* UAV copy constructor
 	*
@@ -62,7 +64,7 @@ public class UAV {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (obj == null) return false;

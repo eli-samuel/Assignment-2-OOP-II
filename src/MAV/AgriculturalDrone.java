@@ -31,7 +31,7 @@ public class AgriculturalDrone extends UAV {
 	* @param A an AgriculturalDrone object
 	*/
 	public AgriculturalDrone(AgriculturalDrone A){
-		super(UAV);
+		super((UAV) A);
 		this.brand = A.brand;
 		this.carryCapacity = A.carryCapacity;
 	}
@@ -84,6 +84,6 @@ public class AgriculturalDrone extends UAV {
 	*/
 	@Override
 	public String toString() {
-		return "AgriculturalDrone [brand=" + brand + ", carryCapacity=" + carryCapacity + "]";
+		return "AgriculturalDrone [brand=" + brand + ", carryCapacity=" + carryCapacity + ", weight=" + weight + ", price=" + price +"]";
 	}
 }

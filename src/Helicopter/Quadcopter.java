@@ -25,7 +25,7 @@ public class Quadcopter extends Helicopter {
 	* @param Q a Quadcopter object
 	*/
 	public Quadcopter(Quadcopter Q){
-		super(Helicopter);
+		super((Helicopter) Q);
 		this.maxFlyingSpeed = Q.maxFlyingSpeed;
 	}
 
@@ -61,6 +61,6 @@ public class Quadcopter extends Helicopter {
 	*/
 	@Override
 	public String toString() {
-		return "Quadcopter [maxFlyingSpeed=" + maxFlyingSpeed + "]";
+		return "Quadcopter [maxFlyingSpeed=" + maxFlyingSpeed + ", numCylinders=" + numCylinders + ", creationYear=" + creationYear + ", passengerCapacity=" + passengerCapacity + ", brand=" + brand + ", price=" + price + ", horsePower=" + horsePower + "]";
 	}
 }
