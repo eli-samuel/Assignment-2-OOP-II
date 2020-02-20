@@ -83,4 +83,9 @@ public class UAV extends FlyingObject {
 	public String toString() {
 		return "This UAV weighs " + weight +" kg" + " and costs $" + price;
 	}
+
+	@Override
+	public UAV make() {
+		return new UAV(this);
+	}
 }

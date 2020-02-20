@@ -90,7 +90,6 @@ public class Airplane extends FlyingObject {
 	/**
 	 *
 	 */
-	@Override
 	public boolean equals(Object obj) {
 		if (obj == null) return false;
 		else if (getClass() != obj.getClass()) return false;
@@ -104,8 +103,13 @@ public class Airplane extends FlyingObject {
 	* Create string representation of Airplane for printing
 	* @return
 	*/
-	@Override
 	public String toString() {
 		return "This airplane is manufactured by " + brand + ", the selling price is " + price + ", and it has " + horsePower + " horsepower.";
 	}
+
+	@Override
+	public Airplane make() {
+		return new Airplane(this);
+	}
+
 }
