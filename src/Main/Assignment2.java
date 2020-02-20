@@ -34,7 +34,7 @@ public class Assignment2 {
 		Multirotor m1 = new Multirotor("OtherBrand", 200000, 60, 4, 1990, 8, 2);
 		UAV uav1 = new UAV(50, 500000);
 
-		//Printing info
+		//Printing object info
 		System.out.println(a1);
 		System.out.println(h1);
 		System.out.println(q1);
@@ -44,7 +44,7 @@ public class Assignment2 {
 		System.out.println(m1);
 		System.out.println(uav1);
 
-		// Testing equals method
+		// Testing for equality of objects
 		System.out.println(h1.equals(a1));		// false
 		System.out.println(a1.equals(h1));		// false
 		System.out.println(ad1.equals(ad2));	// true
@@ -56,9 +56,12 @@ public class Assignment2 {
 				a1, h1, q1, q2, ad1, ad2, mav1, mav2, m1, uav1
 		};
 
+		// Max value of double
 		double smallest = Double.MAX_VALUE;
 		double secondSmallest = Double.MAX_VALUE;
 		int index1=0, index2=0;
+
+		// Searches for the smallest and second smallest object in the array
 		for (int i = 0; i < flyingObjects.length; i++) {
 			if (flyingObjects[i].getPrice() < smallest) {
 				secondSmallest = smallest;
@@ -71,12 +74,14 @@ public class Assignment2 {
 			}
 		}
 
+		// Prints information about the object and the index in the array
 		System.out.println("Index in array: " + index1 + ". Information: " + flyingObjects[index1]); // 150
 		System.out.println("Index in array: " + index2 + ". Information: " + flyingObjects[index2]); // 300
 
 		// Try to copy the array
 		FlyingObject[] flyingObjectsCopy = copyFlyingObjects(flyingObjects);
 
+		// Prints the info of both arrays to see if the copying worked
 		for (int i = 0; i < flyingObjectsCopy.length; i++) {
 			System.out.println("Original array: " + flyingObjects[i]);
 			System.out.println("Copied array: " + flyingObjectsCopy[i]);
