@@ -66,4 +66,5 @@ public class Multirotor extends Helicopter {
 	public String toString() {
 		return "This multirotor has " + numRotors + " rotors, " + numCylinders + " cylinders, and was created in " + creationYear + ". It holds " + passengerCapacity + " passengers, it is manufactured by " + brand + ", the selling price is " + price + ", and it has " + horsePower + " horsepower.";
 	}
+	
 }

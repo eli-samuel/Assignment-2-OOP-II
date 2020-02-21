@@ -64,4 +64,5 @@ public class Quadcopter extends Helicopter {
 	public String toString() {
 		return "This quadcopter has a maximum flying speed of " + maxFlyingSpeed + "km/h, it has " + numCylinders + " cylinders, and was created in " + creationYear + ". It holds " + passengerCapacity + " passengers, it is manufactured by " + brand + ", the selling price is " + price + ", and it has " + horsePower + " horsepower.";
 	}
+	
 }

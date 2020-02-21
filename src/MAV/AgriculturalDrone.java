@@ -86,4 +86,5 @@ public class AgriculturalDrone extends UAV {
 	public String toString() {
 		return "This agricultural drone is manufactured by " + brand + " and can carry up to " + carryCapacity + " kg. It weighs " + weight +" kg" + " and costs $" + price;
 	}
+	
 }

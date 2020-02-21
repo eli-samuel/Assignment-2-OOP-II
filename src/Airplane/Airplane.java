@@ -5,15 +5,14 @@ import FlyingObject.FlyingObject;
 public class Airplane extends FlyingObject {
 
     protected String brand;
-    protected double price;
     protected int horsePower;
 
 	/**
 	* Default empty Airplane constructor
 	*/
 	public Airplane() {
+		super();
 		brand = "";
-		price = 1;
 		horsePower = 1;
 	}
 
@@ -25,8 +24,8 @@ public class Airplane extends FlyingObject {
 	* @param horsePower a integer variable
 	*/
 	public Airplane(String brand, double price, int horsePower) {
+		super(price);
 		this.brand = brand;
-		this.price = price;
 		this.horsePower = horsePower;
 	}
 	/**
@@ -35,8 +34,8 @@ public class Airplane extends FlyingObject {
 	* @param p an Airplane object
 	*/
 	public Airplane(Airplane p){
+		super((FlyingObject) p);
 		this.brand = p.brand;
-		this.price = p.price;
 		this.horsePower = p.horsePower;
 	}
 	/**
@@ -105,11 +104,6 @@ public class Airplane extends FlyingObject {
 	*/
 	public String toString() {
 		return "This airplane is manufactured by " + brand + ", the selling price is " + price + ", and it has " + horsePower + " horsepower.";
-	}
-
-	@Override
-	public Airplane make() {
-		return new Airplane(this);
 	}
 
 }

@@ -14,9 +14,8 @@ public class Assignment2 {
 	public static FlyingObject[] copyFlyingObjects(FlyingObject[] a) {
 		FlyingObject[] b = new FlyingObject[a.length];
 		for (int i = 0; i < a.length; i++) { // because data lost etc, thats why we need to use clone() method
-		b[i] = a[i].make(); // Problem here!
-		b[i].setPrice(b[i].getPrice()+1);
-			//b[i] = (Airplane) a[i].clone(); // Solution!
+			b[i] = new FlyingObject(a[i]);
+			b[i].setPrice(b[i].getPrice()+1);
 		}
 		return b;
 	}
@@ -80,12 +79,16 @@ public class Assignment2 {
 
 		// Try to copy the array
 		FlyingObject[] flyingObjectsCopy = copyFlyingObjects(flyingObjects);
-
+		System.out.println(flyingObjectsCopy == flyingObjects);
+		
 		// Prints the info of both arrays to see if the copying worked
 		for (int i = 0; i < flyingObjectsCopy.length; i++) {
 			System.out.println("Original array: " + flyingObjects[i]);
 			System.out.println("Copied array: " + flyingObjectsCopy[i]);
 		}
+		
+		/* The reason why it didn't work is:
+		 *
+		 */
 	}
-
 }

@@ -5,22 +5,21 @@ import FlyingObject.FlyingObject;
 public class UAV extends FlyingObject {
 
     protected double weight;
-    protected double price;
 
 	/**
 	* Default empty UAV constructor
 	*/
 	public UAV() {
+		super();
 		weight = 1;
-		price  = 1;
 	}
 
 	/**
 	* Default UAV constructor
 	*/
 	public UAV(double weight, double price) {
+		super(price);
 		this.weight = weight;
-		this.price = price;
 	}
 
 	/**
@@ -29,8 +28,8 @@ public class UAV extends FlyingObject {
 	* @param u a UAV object
 	*/
 	public UAV(UAV u){
+		super((FlyingObject) u);
 		this.weight = u.weight;
-		this.price = u.price;
 	}
 
 	/**
@@ -84,8 +83,4 @@ public class UAV extends FlyingObject {
 		return "This UAV weighs " + weight +" kg" + " and costs $" + price;
 	}
 
-	@Override
-	public UAV make() {
-		return new UAV(this);
-	}
 }
